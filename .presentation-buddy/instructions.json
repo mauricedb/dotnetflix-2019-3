@@ -1,0 +1,366 @@
+[
+  {
+    "type": "createFile",
+    "path": "src/registration/registration-form.test.tsx"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "import React from 'react';",
+      "import '@testing-library/jest-dom/extend-expect';",
+      "import { render } from '@testing-library/react';",
+      "",
+      "import RegistrationForm from './registration-form';",
+      "",
+      "describe('The RegistrationForm', () => {",
+      "  test('render the basic registration form', () => {",
+      "    const { getByText, getByLabelText } = render(<RegistrationForm />);",
+      "",
+      "    expect(getByText('Registration')).toBeVisible();",
+      "    expect(getByText('Register')).toBeVisible();",
+      "    expect(getByLabelText('Firstname')).toBeVisible();",
+      "    expect(getByLabelText('Lastname')).toBeVisible();",
+      "    expect(getByLabelText('Country')).toBeVisible();",
+      "    expect(getByLabelText('State')).toBeVisible();",
+      "  });",
+      "});",
+      ""
+    ]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 4,
+    "column": 10
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand"
+  },
+  {
+    "type": "command",
+    "command": "editor.action.clipboardCutAction"
+  },
+  {
+    "type": "typeText",
+    "text": ["<div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "goto",
+    "line": 4,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "      <h2>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "goto",
+    "line": 5,
+    "column": 11
+  },
+  {
+    "type": "typeText",
+    "text": ["Registration"]
+  },
+  {
+    "type": "goto",
+    "line": 5,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "      <div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "skip": true,
+    "type": "goto",
+    "line": 6,
+    "column": 12
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": 2500
+  },
+  {
+    "type": "typeText",
+    "text": ["<label htmlFor=\"firstName\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "skip": true,
+    "type": "goto",
+    "line": 6,
+    "column": 39
+  },
+  {
+    "type": "typeText",
+    "text": ["Firstname"]
+  },
+  {
+    "type": "goto",
+    "line": 6,
+    "column": 56
+  },
+  {
+    "type": "typeText",
+    "text": ["<input type=\"text\" id=\"firstName\" name=\"firstName\"/>"]
+  },
+  {
+    "type": "goto",
+    "line": 6,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "      <div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+
+  {
+    "type": "typeText",
+    "text": ["<label htmlFor=\"lastName\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["Lastname"]
+  },
+  {
+    "type": "goto",
+    "line": 7,
+    "column": 54
+  },
+  {
+    "type": "typeText",
+    "text": ["<input type=\"text\" id=\"lastName\" name=\"lastName\"/>"]
+  },
+  {
+    "type": "goto",
+    "line": 7,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "      <div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["<label htmlFor=\"country\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["Country"]
+  },
+  {
+    "type": "goto",
+    "line": 8,
+    "column": 52
+  },
+  {
+    "type": "typeText",
+    "text": ["<select id=\"country\" name=\"country\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["<option value=\"NL\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["Netherlands"]
+  },
+  {
+    "type": "goto",
+    "line": 8,
+    "column": 127
+  },
+  {
+    "type": "typeText",
+    "text": ["<option value=\"USA\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["USA"]
+  },
+  {
+    "type": "goto",
+    "line": 8,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "      <div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+
+  {
+    "type": "typeText",
+    "text": ["<label htmlFor=\"state\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["State"]
+  },
+  {
+    "type": "goto",
+    "line": 9,
+    "column": 48
+  },
+  {
+    "type": "typeText",
+    "text": ["<input type=\"text\" id=\"state\" name=\"state\"/>"]
+  },
+
+  {
+    "type": "goto",
+    "line": 9,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "      <div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+
+  {
+    "type": "typeText",
+    "text": ["<button>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["Register"]
+  },
+
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "skip": true,
+    "type": "goto",
+    "line": 4,
+    "column": 1
+  },
+  {
+    "skip": true,
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "command",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "skip": true,
+    "type": "createFile",
+    "path": "src/demo.js"
+  },
+  {
+    "skip": true,
+    "type": "typeText",
+    "text": [
+      "// This code is typed by Presentation Buddy",
+      "",
+      "const Calculator = require('./calculator');",
+      "",
+      "const calc = new Calculator();",
+      "const sum = calc.add(1, 2)",
+      "console.log(`The sum of 1 + 2 = ${sum}`);"
+    ]
+  },
+  {
+    "skip": true,
+    "type": "openFile",
+    "path": "src/calculator.js"
+  },
+  {
+    "skip": true,
+    "type": "command",
+    "command": "cursorBottom"
+  },
+  {
+    "skip": true,
+    "type": "typeText",
+    "text": ["", "module.exports = Calculator;"]
+  }
+]
