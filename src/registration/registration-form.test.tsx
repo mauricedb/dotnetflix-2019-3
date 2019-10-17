@@ -6,14 +6,16 @@ import RegistrationForm from './registration-form';
 
 describe('The RegistrationForm', () => {
   test('render the empty registration form', () => {
-    const { getByText, getByLabelText } = render(<RegistrationForm />);
+    const { getByText, getByLabelText, queryByLabelText } = render(
+      <RegistrationForm />
+    );
 
     expect(getByText('Registration')).toBeVisible();
     expect(getByText('Register')).toBeDisabled();
     expect(getByLabelText('Firstname')).toBeVisible();
     expect(getByLabelText('Lastname')).toBeVisible();
     expect(getByLabelText('Country')).toBeVisible();
-    expect(getByLabelText('State')).toBeVisible();
+    expect(queryByLabelText('State')).not.toBeInTheDocument();
   });
 
   test('render the populated registration form', () => {
@@ -23,7 +25,7 @@ describe('The RegistrationForm', () => {
       country: 'NL',
       state: ''
     };
-    const { getByText, getByLabelText } = render(
+    const { getByText, getByLabelText, queryByLabelText } = render(
       <RegistrationForm person={person} />
     );
 
@@ -32,6 +34,6 @@ describe('The RegistrationForm', () => {
     expect(getByLabelText('Firstname')).toHaveValue('Maurice');
     expect(getByLabelText('Lastname')).toHaveValue('de Beijer');
     expect(getByLabelText('Country')).toHaveValue('NL');
-    expect(getByLabelText('State')).toHaveValue('');
+    expect(queryByLabelText('State')).not.toBeInTheDocument('');
   });
 });

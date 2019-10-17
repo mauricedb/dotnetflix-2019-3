@@ -568,6 +568,127 @@
     "type": "typeText",
     "text": [" disabled={!person.firstName || !person.lastName}"]
   },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.test.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 9,
+    "column": 38
+  },
+  {
+    "type": "typeText",
+    "text": [", queryByLabelText"]
+  },
+  {
+    "type": "goto",
+    "line": 16,
+    "column": 12
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand",
+    "repeat": 2
+  },
+  {
+    "type": "typeText",
+    "text": ["queryByLabelText"]
+  },
+  {
+    "type": "goto",
+    "line": 16,
+    "column": 39
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand",
+    "repeat": 2
+  },
+  {
+    "type": "typeText",
+    "text": ["not.toBeInTheDocument"]
+  },
+  {
+    "type": "goto",
+    "line": 26,
+    "column": 38
+  },
+  {
+    "type": "typeText",
+    "text": [", queryByLabelText"]
+  },
+  {
+    "type": "goto",
+    "line": 35,
+    "column": 12
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand",
+    "repeat": 2
+  },
+  {
+    "type": "typeText",
+    "text": ["queryByLabelText"]
+  },
+  {
+    "type": "goto",
+    "line": 35,
+    "column": 39
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand",
+    "repeat": 2
+  },
+  {
+    "type": "typeText",
+    "text": ["not.toBeInTheDocument"]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 47,
+    "column": 7
+  },
+  {
+    "type": "typeText",
+    "text": ["{person.country === 'USA' && (", ""]
+  },
+  {
+    "type": "goto",
+    "line": 57,
+    "column": 999
+  },
+
+  {
+    "type": "typeText",
+    "text": ["", ")}", ""]
+  },
 
   {
     "type": "command",

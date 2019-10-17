@@ -44,16 +44,19 @@ const RegistrationForm = ({ person: initalPerson }: any) => {
           <option value="USA">USA</option>
         </select>
       </div>
-      <div>
-        <label htmlFor="state">State</label>
-        <input
-          type="text"
-          id="state"
-          name="state"
-          value={person.state}
-          onChange={handleChange}
-        />
-      </div>
+      {person.country === 'USA' && (
+        <div>
+          <label htmlFor="state">State</label>
+          <input
+            type="text"
+            id="state"
+            name="state"
+            value={person.state}
+            onChange={handleChange}
+          />
+        </div>
+      )}
+
       <div>
         <button disabled={!person.firstName || !person.lastName}>
           Register
