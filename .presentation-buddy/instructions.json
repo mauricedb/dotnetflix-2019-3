@@ -1,5 +1,10 @@
 [
   {
+    "type": "command",
+    "command": "workbench.action.closeAllEditors"
+  },
+
+  {
     "type": "createFile",
     "path": "src/registration/registration-form.test.tsx"
   },
@@ -13,7 +18,7 @@
       "import RegistrationForm from './registration-form';",
       "",
       "describe('The RegistrationForm', () => {",
-      "  test('render the basic registration form', () => {",
+      "  test('render the empty registration form', () => {",
       "    const { getByText, getByLabelText } = render(<RegistrationForm />);",
       "",
       "    expect(getByText('Registration')).toBeVisible();",
@@ -38,8 +43,31 @@
   },
 
   {
-    "type": "openFile",
+    "type": "createFile",
     "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "  import React from 'react';",
+      "",
+      "  const RegistrationForm = () => {",
+      "    return null;",
+      "  };",
+      "",
+      "  export default RegistrationForm;",
+      ""
+    ]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
   },
   {
     "type": "goto",
@@ -102,29 +130,12 @@
     "delay": 250
   },
   {
-    "skip": true,
-    "type": "goto",
-    "line": 6,
-    "column": 12
-  },
-  {
-    "skip": true,
-    "type": "wait",
-    "delay": 2500
-  },
-  {
     "type": "typeText",
     "text": ["<label htmlFor=\"firstName\">"]
   },
   {
     "type": "wait",
     "delay": 250
-  },
-  {
-    "skip": true,
-    "type": "goto",
-    "line": 6,
-    "column": 39
   },
   {
     "type": "typeText",
@@ -303,6 +314,194 @@
     "type": "typeText",
     "text": ["Register"]
   },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.test.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 17,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "",
+      "  test('render the populated registration form', () => {",
+      "    const person = {firstName: 'Maurice', lastName: 'de Beijer', country: 'NL', state: ''};",
+      "    const { getByText, getByLabelText } = render(<RegistrationForm person={person} />);",
+      "",
+      "    expect(getByText('Registration')).toBeVisible();",
+      "    expect(getByText('Register')).toBeVisible();",
+      "    expect(getByLabelText('Firstname')).toHaveValue('Maurice');",
+      "    expect(getByLabelText('Lastname')).toHaveValue('de Beijer');",
+      "    expect(getByLabelText('Country')).toHaveValue('NL');",
+      "    expect(getByLabelText('State')).toHaveValue('');",
+      "  });",
+      ""
+    ]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 3,
+    "column": 27
+  },
+  {
+    "type": "typeText",
+    "text": ["{person}: any"]
+  },
+  {
+    "type": "goto",
+    "line": 32
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "RegistrationForm.defaultProps = { person: {firstName: '', lastName: '', country: 'NL', state: ''} };",
+      "",
+      "type Person = typeof RegistrationForm.defaultProps.person",
+      ""
+    ]
+  },
+  {
+    "type": "goto",
+    "line": 9,
+    "column": 60
+  },
+  {
+    "type": "typeText",
+    "text": ["value={person.firstName} "]
+  },
+  {
+    "type": "goto",
+    "line": 13,
+    "column": 58
+  },
+  {
+    "type": "typeText",
+    "text": ["value={person.lastName} "]
+  },
+  {
+    "type": "goto",
+    "line": 17,
+    "column": 44
+  },
+  {
+    "type": "typeText",
+    "text": [" value={person.country}"]
+  },
+  {
+    "type": "goto",
+    "line": 24,
+    "column": 52
+  },
+  {
+    "type": "typeText",
+    "text": ["value={person.state} "]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 3,
+    "column": 35
+  },
+  {
+    "type": "typeText",
+    "text": [": initalPerson"]
+  },
+  {
+    "type": "goto",
+    "line": 3,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "  const [person, setPerson] = React.useState<Person>(initalPerson);",
+      "",
+      "  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {",
+      "    setPerson((p: Person) => ({ ...p, [target.name]: target.value }));",
+      "  };",
+      ""
+    ]
+  },
+  {
+    "type": "goto",
+    "line": 19,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "          onChange={handleChange}"]
+  },
+  {
+    "type": "goto",
+    "line": 29,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "          onChange={handleChange}"]
+  },
+  {
+    "type": "goto",
+    "line": 35,
+    "column": 67
+  },
+  {
+    "type": "typeText",
+    "text": [" onChange={handleChange}"]
+  },
+  {
+    "type": "goto",
+    "line": 42,
+    "column": 73
+  },
+  {
+    "type": "typeText",
+    "text": [" onChange={handleChange}"]
+  },
 
   {
     "type": "command",
@@ -315,52 +514,68 @@
   },
 
   {
-    "skip": true,
-    "type": "goto",
-    "line": 4,
-    "column": 1
+    "type": "openFile",
+    "path": "src/registration/registration-form.test.tsx"
   },
   {
-    "skip": true,
+    "type": "goto",
+    "line": 12,
+    "column": 35
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand",
+    "repeat": 2
+  },
+  {
+    "type": "typeText",
+    "text": ["toBeDisabled"]
+  },
+  {
+    "type": "goto",
+    "line": 31,
+    "column": 35
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand",
+    "repeat": 2
+  },
+  {
+    "type": "typeText",
+    "text": ["toBeEnabled"]
+  },
+  {
     "type": "command",
     "command": "workbench.action.files.save"
   },
   {
     "skip": true,
-    "type": "command",
-    "command": "workbench.action.closeActiveEditor"
+    "type": "wait",
+    "delay": "manual"
   },
+
   {
-    "skip": true,
-    "type": "createFile",
-    "path": "src/demo.js"
-  },
-  {
-    "skip": true,
-    "type": "typeText",
-    "text": [
-      "// This code is typed by Presentation Buddy",
-      "",
-      "const Calculator = require('./calculator');",
-      "",
-      "const calc = new Calculator();",
-      "const sum = calc.add(1, 2)",
-      "console.log(`The sum of 1 + 2 = ${sum}`);"
-    ]
-  },
-  {
-    "skip": true,
     "type": "openFile",
-    "path": "src/calculator.js"
+    "path": "src/registration/registration-form.tsx"
   },
   {
-    "skip": true,
-    "type": "command",
-    "command": "cursorBottom"
+    "type": "goto",
+    "line": 58,
+    "column": 16
   },
   {
-    "skip": true,
     "type": "typeText",
-    "text": ["", "module.exports = Calculator;"]
+    "text": [" disabled={!person.firstName || !person.lastName}"]
+  },
+
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
   }
 ]
