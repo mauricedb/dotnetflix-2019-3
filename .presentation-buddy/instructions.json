@@ -831,6 +831,157 @@
     "type": "typeText",
     "text": [" onClick={() => onRegister && onRegister(person)}"]
   },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "skip": true,
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 14,
+    "column": 9
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"card\" style={{ marginTop: 24 }}"]
+  },
+
+  {
+    "type": "goto",
+    "line": 14,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["<div className=\"card-header\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  {
+    "type": "goto",
+    "line": 17,
+    "column": 11
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"card-body\""]
+  },
+  {
+    "type": "goto",
+    "line": 17,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["<div>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction",
+    "repeat": 52
+  },
+
+  {
+    "type": "goto",
+    "line": 17,
+    "column": 38
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"form-group\""]
+  },
+  {
+    "type": "goto",
+    "line": 27,
+    "column": 11
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"form-group\""]
+  },
+  {
+    "type": "goto",
+    "line": 37,
+    "column": 11
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"form-group\""]
+  },
+  {
+    "type": "goto",
+    "line": 50,
+    "column": 15
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"form-group\""]
+  },
+  {
+    "type": "goto",
+    "line": 62,
+    "column": 11
+  },
+  {
+    "type": "typeText",
+    "text": [" className=\"float-right\""]
+  },
+  {
+    "type": "goto",
+    "line": 65,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "className=\"btn btn-primary\""]
+  },
+  {
+    "type": "goto",
+    "line": 19,
+    "column": 11
+  },
+  {
+    "skip": true,
+    "type": "typeText",
+    "text": [" className=\"form-group\""]
+  },
+  {
+    "type": "goto",
+    "line": 19,
+    "column": 11
+  },
+  {
+    "skip": true,
+    "type": "typeText",
+    "text": [" className=\"form-group\""]
+  },
 
   {
     "type": "command",
