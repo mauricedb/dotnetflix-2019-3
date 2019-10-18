@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 
 import RegistrationForm from './registration-form';
 
@@ -34,6 +34,48 @@ describe('The RegistrationForm', () => {
     expect(getByLabelText('Firstname')).toHaveValue('Maurice');
     expect(getByLabelText('Lastname')).toHaveValue('de Beijer');
     expect(getByLabelText('Country')).toHaveValue('NL');
-    expect(queryByLabelText('State')).not.toBeInTheDocument('');
+    expect(queryByLabelText('State')).not.toBeInTheDocument();
+  });
+
+  test('render the USA based populated registration form', () => {
+    const person = {
+      firstName: 'Chuck',
+      lastName: 'Norris',
+      country: 'USA',
+      state: 'Texas'
+    };
+    const { getByText, getByLabelText } = render(
+      <RegistrationForm person={person} />
+    );
+
+    expect(getByText('Registration')).toBeVisible();
+    expect(getByText('Register')).toBeVisible();
+    expect(getByLabelText('Firstname')).toHaveValue('Chuck');
+    expect(getByLabelText('Lastname')).toHaveValue('Norris');
+    expect(getByLabelText('Country')).toHaveValue('USA');
+    expect(getByLabelText('State')).toHaveValue('Texas');
+  });
+
+  test('register a person', () => {
+    const onRegister = jest.fn();
+    const { getByText, getByLabelText } = render(
+      <RegistrationForm onRegister={onRegister} />
+    );
+
+    fireEvent.change(getByLabelText('Firstname'), {
+      target: { name: 'firstName', value: 'Mike' }
+    });
+    fireEvent.change(getByLabelText('Lastname'), {
+      target: { name: 'lastName', value: 'Jones' }
+    });
+
+    fireEvent.click(getByText('Register'));
+
+    expect(onRegister).toHaveBeenCalledWith({
+      firstName: 'Mike',
+      lastName: 'Jones',
+      country: 'NL',
+      state: ''
+    });
   });
 });

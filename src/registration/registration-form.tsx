@@ -1,12 +1,13 @@
 import React from 'react';
 
-const RegistrationForm = ({ person: initalPerson }: any) => {
+const RegistrationForm = ({ person: initalPerson, onRegister }: any) => {
   const [person, setPerson] = React.useState<Person>(initalPerson);
 
   const handleChange = ({
     target
   }: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setPerson((p: Person) => ({ ...p, [target.name]: target.value }));
+    const { name, value } = target;
+    setPerson((p: Person) => ({ ...p, [name]: value }));
   };
 
   return (
@@ -58,7 +59,10 @@ const RegistrationForm = ({ person: initalPerson }: any) => {
       )}
 
       <div>
-        <button disabled={!person.firstName || !person.lastName}>
+        <button
+          disabled={!person.firstName || !person.lastName}
+          onClick={() => onRegister && onRegister(person)}
+        >
           Register
         </button>
       </div>

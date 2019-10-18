@@ -2,3 +2,4 @@
 - Be able to render a form with existing data for an existing user
 - The first and last name are required. The register button should be disabled when the form is invalid.
 - The state field shoud only be visible when the country is USA
+- When the submit button is clicked the onRegister callback should be called with the person entered
