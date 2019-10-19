@@ -6,6 +6,10 @@
 
   {
     "type": "createFile",
+    "path": "src/registration/registration-form.tsx"
+  },
+  {
+    "type": "createFile",
     "path": "src/registration/registration-form.test.tsx"
   },
   {
@@ -26,13 +30,9 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -53,8 +53,9 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
+    "type": "wait",
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -80,15 +81,11 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
+    "type": "wait",
+    "delay": "manual",
+    "save": true
   },
 
-  {
-    "skip": true,
-    "type": "wait",
-    "delay": "manual"
-  },
   {
     "type": "openFile",
     "path": "src/registration/registration-form.tsx"
