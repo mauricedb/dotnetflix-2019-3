@@ -3,3 +3,4 @@
 - The first and last name are required. The register button should be disabled when the form is invalid.
 - The state field shoud only be visible when the country is USA
 - When the submit button is clicked the onRegister callback should be called with the person entered
+- The form should be styled using Bootstrap

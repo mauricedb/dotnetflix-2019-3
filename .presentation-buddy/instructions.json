@@ -336,13 +336,9 @@
     "text": ["Register"]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -374,13 +370,9 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -447,14 +439,9 @@
     "text": ["value={person.state} "]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -524,15 +511,10 @@
     "type": "typeText",
     "text": [" onChange={handleChange}"]
   },
-
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -568,13 +550,9 @@
     "text": ["toBeEnabled"]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -591,13 +569,9 @@
     "text": [" disabled={!person.firstName || !person.lastName}"]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -670,13 +644,6 @@
     "column": 39
   },
   {
-    "skip": true,
-    "type": "command",
-    "command": "editor.action.smartSelect.expand",
-    "repeat": 2
-  },
-
-  {
     "type": "command",
     "command": "cursorEndSelect"
   },
@@ -686,13 +653,9 @@
     "text": ["not.toBeInTheDocument()"]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -718,15 +681,10 @@
     "type": "typeText",
     "text": ["", ")}", ""]
   },
-
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -758,13 +716,9 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -797,13 +751,9 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -829,13 +779,9 @@
     "text": [" onClick={() => onRegister && onRegister(person)}"]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -960,33 +906,7 @@
     "text": ["", "className=\"btn btn-primary\""]
   },
   {
-    "type": "goto",
-    "line": 19,
-    "column": 11
-  },
-  {
-    "skip": true,
-    "type": "typeText",
-    "text": [" className=\"form-group\""]
-  },
-  {
-    "type": "goto",
-    "line": 19,
-    "column": 11
-  },
-  {
-    "skip": true,
-    "type": "typeText",
-    "text": [" className=\"form-group\""]
-  },
-
-  {
     "type": "command",
     "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
-    "type": "wait",
-    "delay": "manual"
   }
 ]
